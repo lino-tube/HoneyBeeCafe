@@ -8,13 +8,14 @@
 <body>
     <!--Header Section-->
     <header>
-
         <table width="100%">
             <tr>
                 <td width="20%">
+                    <!--HoneyBee Cafe Logo-->
                     <img src="../assets/images/HoneyBee Logo.jpeg" alt="HoneyBee Cafe Logo" width="120">
                 </td>
                 <td>
+                    <!--Main Navigation Menu-->
                     <nav>
                         <a href="../index.html">HOME</a>
                         <a href="./about.html">ABOUT</a>
@@ -26,8 +27,99 @@
             </tr>
         </table>
     </header>
-    <!--Main Goes Here-->
-    <main></main>
+    <!--Main Content-->
+    <main>
+        <!--Main heading of the enquiry page-->
+        <h1>Make an Enquiry</h1>
+        <!--Introduction of the enquiry form-->
+        <p1>Have a question about HoneyBee Cafe?<br/>
+        Complete the form below and let us know how we can help.</p1>
+        <!--Enquiry Form-->
+        <form>
+            <!--Customer's personal information-->
+            <fieldset>
+                <legend>Contact Information</legend>
+                <!--Full name field-->
+                <label for="full-name">Full Name:</label>
+                <input type="text" id="full-name" name="full-name" required>
+                <br/><br/>
+                <!--Email address field-->
+                <label for="email">Email Adress:</label>
+                <input type="email" id="email" name="email" required>
+                <br/><br/>
+                <!--Phone number field-->
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </fieldset>
+            <br/><br/>
+            <!--Type of Enquiry-->
+            <fieldset>
+                <legend>Enquiry Type</legend>
+                <!--Allows the customers to choose what their enquiry is about-->
+                <label for="enquiry-type">What is your enquiry about?</label>
+                <select id="enquiry-type" name="enquiry-type" required>
+                    <option value="">-- Please Select --</option>
+                    <!--Product and menu questions-->
+                    <option value="product-menu">Product & Menu Enquiry</option>
+                    <!--Placing an order option-->
+                    <option value="order">Order Enquiry</option>
+                    <!--Questions about visiting the cafe-->
+                    <option value="visit-availability">Visit & Availability</option>
+                    <!--General questions about the cafe-->
+                    <option value="general">General Cafe Enquiry</option>
+                </select>
+            </fieldset>
+            <br/><br/>
+            <!--Order Details-->
+            <fieldset>
+                <legend>Order Details</legend>
+                <!--Allows the customers to list the number of items they want-->
+                <label for="order-items">What would you like to order?</label>
+                <textarea id="order-items" name="order-items" rows="4" cols="40" placeholder="Please list the items you would like to order."></textarea>
+                <br/><br/>
+                <!--Allows the customers to choose delivery or collection-->
+                <fieldset>
+                    <legend>Delivery or Collection</legend>
+                    <!--Delivery option-->
+                    <input type="radio" id="delivery" name="order-method" value="delivery">
+                    <label for="delivery">Delivery</label>
+                    <!--Collection option-->
+                    <input type="radio" id="collection" name="order-method" value="collection">
+                    <label for="collection">Collection</label>
+                </fieldset>
+            </fieldset>
+            <br/><br/>
+            <!--Delivery and Collection Details-->
+            <fieldset>
+                <legend>Delivery and Collection Details</legend>
+                <!--Delivery address-->
+                <label for="delivery-address">Delivery Address:</label>
+                <br/>
+                <textarea id="delivery-address" name="delivery-address" rows="4" cols="40" placeholder="Enter your delivery address"></textarea>
+                <br/><br/>
+                <!--Preferred date for delivery or collect-->
+                <label for="preferred-date">Preferred Date:</label>
+                <input type="date" id="preferred-date" name="preferred-date">
+                <br/><br/>
+                <!--Preferred time for delivery or collection-->
+                <label for="preferred-time">Preferred Time:</label>
+                <input type="time" id="preferred-time" name="preferred-time">
+            </fieldset>
+            <br/><br/>
+            <!--Delivery instructions or Additional information-->
+            <fieldset>
+                <legend>Delivery Instructions or Additional Information</legend>
+                <!--Allows customer's to give out the instructions or explain their enquiry-->
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" cols="40" placeholder="Tell us anything else we should know"></textarea>
+            </fieldset>
+            <br/><br/>
+            <!--Form submission button-->
+            <div>
+                <button type="submit">Submit Enquiry</button>
+            </div>
+        </form>
+    </main>
     <!--Footer Section-->
     <footer>
         <h3>HoneyBee Cafe</h3>
