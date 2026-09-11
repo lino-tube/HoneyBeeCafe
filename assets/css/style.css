@@ -3,7 +3,45 @@
     External CSS Stylesheet
 */
 
-/* Test style to confirm that the CSS file is connected */
+/* Google Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Serif+Text&display=swap');
+
+/* CSS Reset */
+
+/* Removes the browser's default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+/* Base styling */
+/* Styling for the entire webpage */
 body {
-    background-color: lightblue;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    /* Cream White */
+    background-color: #FFF8E7;
+    color: #333333;
+}
+
+
+
+/* Image styling */
+/* Help images adjust to smaller screens */
+img {
+    max-width: 100%;
+    height: auto;
+
+    display: block;
+}
+
+/* Link Styling */
+a {
+    text-decoration: none;
+ 
+    /* Baby Blue */
+    color: #6FA8DC;
 }
