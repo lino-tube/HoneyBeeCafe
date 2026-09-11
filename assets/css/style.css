@@ -4,16 +4,35 @@
 */
 
 /* Google Fonts */
-
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Serif+Text&display=swap');
 
-/* CSS Reset */
+/* HoneyBee Café colour palette */
+:root {
+    --baby-blue: #A9D6E5;
+    --baby-pink: #F7C8D0;
+    --cream-white: #FFF8E7;
+    --dark-text: #333333;
+    --white: #FFFFFF;
+}
 
+/* CSS Reset */
 /* Removes the browser's default margin and padding */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box; 
+}
+
+/* Header visual styling */
+header {
+    background-color: var(--white);
+    border-bottom: 3px solid var(--baby-blue);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Styles the HoneyBee Cafe logo */
+header img {
+    border-radius: 8px;
 }
 
 /* Base styling */
@@ -22,9 +41,15 @@ body {
     font-family: Arial, sans-serif;
     font-size: 18px;
     line-height: 1.6;
-    /* Cream White */
-    background-color: #FFF8E7;
-    color: #333333;
+    background-color: var(--cream-white);
+    color: var(--dark-text);
+}
+
+/* Heading visual styling */
+h1,
+h2,
+h3 {
+    color: #4F6D7A;
 }
 
 /*H1: Main headings*/
@@ -60,6 +85,7 @@ p {
     font-weight: 400;
     line-height: 1.6;
 }
+
 /* Image styling */
 /* Help images adjust to smaller screens */
 img {
@@ -77,12 +103,51 @@ a {
     color: #6FA8DC;
 }
 
+/* Navigation layout */
+/* Places the navigation links in a row */
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+}
+
 /* Navigation text */
 nav a {
     font-family: Arial, sans-serif;
     font-size: 0.9375rem;
     font-weight: 600;
     letter-spacing: 0.02em;
+}
+
+/* Styles each navigation link */
+nav a{
+    color: #333333;
+    white-space: nowrap;
+}
+
+/* Navigation visual styling */
+nav a {
+    color: var(--dark-text);
+    padding: 0.5rem 0.75rem;
+    border-bottom: 2px solid transparent;
+}
+
+/* Changes the navigation link when the mouse moves over it */
+nav a:hover {
+    color: #5B9BD5;
+    border-bottom: 2px solid var(--baby-pink);
+}
+
+/* Shows which navigation link has keyboard focus */
+nav a:focus {
+    outline: 2px solid var(--baby-blue);
+    outline-offset: 3px;
+}
+
+/* Styling while the navigation link is being clicked */
+nav a:active {
+    color: #5B9BD5;
 }
 
 /* Button text */
@@ -113,20 +178,7 @@ header img {
     height: auto;
 }
 
-/* Navigation layout */
-/* Places the navigation links in a row */
-nav {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 2rem;
-}
 
-/* Styles each navigation link */
-nav a {
-    color: #333333;
-    white-space: nowrap;
-}
 
 /* Main content layout */
 main {
@@ -195,6 +247,20 @@ main > section:nth-of-type(3) td img {
 
 main > section:nth-of-type(3) td h3 {
     margin-top: 0.5rem;
+}
+
+/* Highlight cards */
+main > section:nth-of-type(3) td {
+    background-color: var(--white);
+    padding: 1.5rem;
+    border: 2px solid var(--baby-pink);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Gives the highlight cards a small visual effect on hover */
+main > section:nth-of-type(3) td:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
 }
 
 /* Footer layout */
@@ -284,6 +350,21 @@ main section table td img {
     margin: 0 auto 1rem;
 }
 
+/* Product image styling */
+main section table td img {
+    border: 2px solid var(--baby-blue);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Product names */
+main section table td h3 {
+    color: var(--dark-text);
+    font-family: Arial, sans-serif;
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-top: 0.75rem;
+}
+
 /* Contact page layout */
 /* Centres the Contact page heading */
 main > h1 {
@@ -338,8 +419,85 @@ textarea {
     margin-top: 0.5rem;
 }
 
+/* Styles text fields, dropdowns and text areas */
+input,
+select,
+textarea {
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    border: 1px solid #CCCCCC;
+    background-color: var(--cream-white);
+    color: var(--dark-text);
+}
+
+/* Highlights the field currently being used */
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid var(--baby-blue);
+    border-color: var(--baby-blue);
+}
+
 /* Allows the message boxes to be resized vertically */
 textarea {
     min-height: 150px;
     resize: vertical;
+}
+
+/* Form visual styling */
+form {
+    background-color: var(--white);
+    padding: 2rem;
+    border: 2px solid var(--baby-blue);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+fieldset {
+    border: 1px solid var(--baby-pink);
+    padding: 1.5rem;
+}
+
+legend {
+    padding: 0 0.5rem;
+    font-family: 'DM Serif Text', serif;
+    font-size: 1.625rem;
+    color: #4F6D7A;
+}
+
+/* Button styling */
+button,
+input[type="submit"] {
+    background-color: var(--baby-blue);
+    color: var(--dark-text);
+    border: 2px solid var(--baby-blue);
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+}
+
+button:hover,
+input[type="submit"]:hover {
+    background-color: var(--baby-pink);
+    border-color: var(--baby-pink);
+}
+
+button:focus,
+input[type="submit"]:focus {
+    outline: 2px solid #5B9BD5;
+    outline-offset: 3px;
+}
+
+button:active,
+input[type="submit"]:active {
+    transform: translateY(1px);
+}
+
+/* Footer visual styling */
+
+footer {
+    background-color: var(--baby-pink);
+    border-top: 3px solid var(--baby-blue);
+}
+
+footer h3 {
+    color: var(--dark-text);
 }
