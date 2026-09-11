@@ -212,3 +212,72 @@ footer h3 {
 footer p {
     margin-bottom: 0.5rem;
 }
+
+/* About page layout */
+/* Centres the main About page heading */
+main > h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Adds spacing between the About page sections */
+main section {
+    margin-bottom: 4rem;
+}
+
+/* Controls the width of paragraphs */
+main section p {
+    max-width: 1000px;
+    margin: 0 auto 1.5rem;
+}
+
+/* Founders and team layout */
+/* Makes the tables containing people use the available width */
+main section table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 2rem;
+}
+
+/* Keeps people in separate columns on desktop */
+main section table td {
+    text-align: center;
+    vertical-align: top;
+}
+
+/* Keeps team images consistent */
+main section table td img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin: 0 auto 1rem;
+}
+
+/* Products & Services page */
+/* Centres the MENU heading */
+main > h1 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+/* Gives the product tables a clean desktop layout */
+main section table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 1.5rem;
+}
+
+/* Centres each product */
+main section table td {
+    text-align: center;
+    vertical-align: top;
+    width: 25%;
+}
+
+/* Keeps the product images consistent */
+main section table td img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin: 0 auto 1rem;
+}
