@@ -76,3 +76,19 @@ a {
     /* Baby Blue */
     color: #6FA8DC;
 }
+
+/* Navigation text */
+nav a {
+    font-family: Arial, sans-serif;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+/* Button text */
+button, 
+input[type="submit"] {
+    font-family: Arial, sans-serif;
+    font-size: 0.9375rem;
+    font-weight: 600;
+}
