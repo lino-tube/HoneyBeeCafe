@@ -518,7 +518,10 @@ input[type="submit"]:active {
 footer {
     background-color: var(--baby-pink);
     border-top: 3px solid var(--baby-blue);
+
 }
+
+
 
 footer h3 {
     color: var(--dark-text);
@@ -783,3 +786,32 @@ input[type="submit"] {
     display: block;
     margin: 1rem auto;
 }
+
+/* Aligns the Follow Us section to the left */
+.social-icons {
+    text-align: left;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+/* Makes the Follow Us heading left-aligned */
+.follow {
+    text-align: left;
+}
+
+/* Styles the social media icons */
+.social-icons a {
+    font-size: 2rem;
+    color: var(--dark-text);
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* Icon hover effect */
+.social-icons a:hover {
+    color: #5B9BD5;
+    transform: scale(1.1);
+}
+
