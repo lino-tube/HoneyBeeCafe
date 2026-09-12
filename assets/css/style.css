@@ -389,11 +389,14 @@ main section h2 {
     margin-bottom: 1rem;
 }
 
-/* Makes the Google Maps iframe responsive */
+/* Centres the map and makes it square */
 iframe {
-    width: 100%;
+    width: 500px;
+    height: 500px;
     max-width: 100%;
-    min-height: 400px;
+    min-height: 300px;
+    display: block;
+    margin: 2rem auto;
     border: 0;
 }
 
@@ -701,6 +704,8 @@ main section table td p {
 
     /* Makes the Google Map shorter on mobile */
     iframe {
+        width: 100%;
+        height: 350px;
         min-height: 300px;
     }
 }
