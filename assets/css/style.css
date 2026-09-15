@@ -194,32 +194,59 @@ section {
     margin-bottom: 4rem;
 }
 
-/* Welcome section */
-main > section:first-child {
+/* Home page hero section */
+/* Creates the main hero area */
+.hero {
+    width: 100%;
+    margin-bottom: 4rem;
+}
+
+/* Places the hero image and welcome text next to each other */
+.hero-top {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+/* Controls the width of the hero image */
+.hero-image {
+    width: 60%;
+    margin-left: 1rem;
+}
+
+/* Makes the hero image square */
+.hero-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Controls the welcome heading area */
+.hero-welcome {
+    width: 50%;
     text-align: center;
 }
 
-/* Adds space below the main heading */
-main > section:first-child h1 {
-    margin-bottom: 1rem;
-}
-
-/* Adds space below the second heading */
-main > section:first-child h2 {
+/* Adds space underneath the main welcome heading */
+.hero-welcome h1 {
     margin-bottom: 1.5rem;
 }
 
-/* Controls the width of the welcome paragraph */
-main > section:first-child p {
-    max-width: 900px;
-    margin: 0 auto 2rem;
+/* Controls the slogan */
+.hero-welcome h2 {
+    margin-bottom: 0;
 }
 
-/* Hero image */
-main > section:first-child img {
+/* Places the welcome paragraph underneath the hero */
+.hero-paragraph {
     width: 100%;
-    max-height: 550px;
-    object-fit: cover;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+/* Keeps the welcome paragraph from becoming too wide */
+.hero-paragraph p {
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -594,6 +621,24 @@ main section table td p {
     section {
         margin-bottom: 3rem;
     }
+
+    /* Changes the Home hero to one column on smaller screens */
+    .hero-top {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    /* Makes the hero image and text use the full width */
+    .hero-image,
+    .hero-welcome {
+        width: 100%;
+    }
+
+    /* Keeps the square hero image centred */
+    .hero-image img {
+        max-width: 500px;
+        margin: 0 auto;
+    }
 }
 
 /* Responsive design mobile */
@@ -761,6 +806,37 @@ main section:last-of-type article {
     text-align: center;
     font-weight: 600;
     margin-bottom: 2rem;
+}
+
+/* Makes the enquiry link look like a button */
+.enquiry-link a {
+    display: inline-block;
+    background-color: var(--baby-blue);
+    color: var(--dark-text);
+    border: 2px solid var(--baby-blue);
+    padding: 0.75rem 1.5rem;
+    font-family: Arial, sans-serif;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Changes the button colour when the mouse is over it */
+.enquiry-link a:hover {
+    background-color: var(--baby-pink);
+    border-color: var(--baby-pink);
+}
+
+/* Shows an outline when the link receives keyboard focus */
+.enquiry-link a:focus {
+    outline: 2px solid #5B9BD5;
+    outline-offset: 3px;
+}
+
+/* Slight movement when the button is clicked */
+.enquiry-link a:active {
+    transform: translateY(1px);
 }
 
 /* Slightly bolds paragraph text */
