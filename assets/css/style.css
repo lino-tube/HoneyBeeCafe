@@ -891,3 +891,24 @@ input[type="submit"] {
     transform: scale(1.1);
 }
 
+/* Makes the entire Home page product card clickable */
+main > section:nth-of-type(2) td a {
+    display: block;
+    color: var(--dark-text);
+}
+
+/* Shows that the product card can be clicked */
+main > section:nth-of-type(2) td {
+    cursor: pointer;
+}
+
+/* Slightly enlarges the image when the card is hovered */
+main > section:nth-of-type(2) td:hover img {
+    transform: scale(1.05);
+}
+
+/* Smooth image hover effect */
+main > section:nth-of-type(2) td img {
+    transition: transform 0.3s ease;
+}
+
