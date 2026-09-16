@@ -178,6 +178,16 @@ The CSS was used to improve the website's:
 ||Made the Home page product/category cards visually indicate that they are clickable.
 ||Added visual feedback when users interact with important website elements. 
 
+## How the website looks on different devices
+### Mobile S - 320px
+<img width="1344" height="643" alt="Screenshot 2026-09-16 161037" src="https://github.com/user-attachments/assets/2e60393d-b380-43a8-9f96-8c738041108a" />
+
+### Tablet - 768px
+<img width="1355" height="643" alt="Screenshot 2026-09-16 161117" src="https://github.com/user-attachments/assets/37d2f2ef-b12b-4616-99f3-61ecd38d8551" />
+
+### Laptop - 1024px
+<img width="1357" height="679" alt="Screenshot 2026-09-16 161156" src="https://github.com/user-attachments/assets/4d3cd9e0-2245-450d-9209-cf79c98aa291" />
+
 ## References
  - Bannarasee, R. 2024.  A Cafe and Bakery?. [online]  Available at: 
 https://www.chefsresource.com/a-cafe-and-bakery/ [Accessed 01 August 2026]. 
