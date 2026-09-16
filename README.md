@@ -127,50 +127,56 @@ The CSS was used to improve the website's:
 |Point of focus| Actions Taken
 |--------------|--------------
 |CSS and Website Styling | Added an external CSS stylesheet and linked it to all website pages.
-Added a CSS reset to remove default browser margins and padding.
-Added the HoneyBee Café colour palette using CSS variables for baby blue, baby pink, cream white, dark text, and white.
-Added consistent typography for headings, paragraphs, navigation, buttons, menu items, and other website content.
-Added Google Fonts for the main heading and section headings.
-Adjusted font sizes, font weights, line spacing, and text alignment to improve readability.
-Added consistent styling for headings and paragraphs throughout the website.
-Added styling for hyperlinks, including hover, focus, and active states.
-Styled buttons and enquiry links to match the website colour scheme.
-Added focus outlines to interactive elements to improve keyboard accessibility.
+||Added a CSS reset to remove default browser margins and padding.
+||Added the HoneyBee Café colour palette using CSS variables for baby blue, baby pink, cream white, dark text, and white.
+||Added consistent typography for headings, paragraphs, navigation, buttons, menu items, and other website content.
+||Added Google Fonts for the main heading and section headings.
+||Adjusted font sizes, font weights, line spacing, and text alignment to improve readability.
+||Added consistent styling for headings and paragraphs throughout the website.
+||Added styling for hyperlinks, including hover, focus, and active states.
+||Styled buttons and enquiry links to match the website colour scheme.
+||Added focus outlines to interactive elements to improve keyboard accessibility.
+||
 |Layout and Structure | Improved the overall spacing and alignment of the website content.
-Added a consistent maximum content width and page padding.
-Used Flexbox to arrange the Home page hero image and welcome text.
-Used table-based layouts already present in the HTML and styled them to display content in organised columns.
-Added spacing, borders, shadows, and alignment to product and content cards.
-Created a consistent visual structure between the different pages.
+||Added a consistent maximum content width and page padding.
+||Used Flexbox to arrange the Home page hero image and welcome text.
+||Used table-based layouts already present in the HTML and styled them to display content in organised columns.
+||Added spacing, borders, shadows, and alignment to product and content cards.
+||Created a consistent visual structure between the different pages.
+||
 |Images | Added responsive image styling so images can scale down when the screen becomes smaller.
-Standardised the size and appearance of product and team images.
-Added borders, rounded images, and visual effects where appropriate.
-Added hover effects to selected images and product cards.
+||Standardised the size and appearance of product and team images.
+||Added borders, rounded images, and visual effects where appropriate.
+||Added hover effects to selected images and product cards.
+||
 |Navigation | Styled the navigation links so they are clearly visible and consistent across the website.
-Added spacing between navigation items.
-Added hover, focus, and active states to provide visual feedback.
-Adjusted the navigation layout for smaller screens so the links can wrap or change to a vertical layout.
+||Added spacing between navigation items.
+||Added hover, focus, and active states to provide visual feedback.
+||Adjusted the navigation layout for smaller screens so the links can wrap or change to a vertical layout.
+||
 |Forms | Styled the enquiry and contact forms to make them easier to read and use.
-Added spacing and borders around form sections.
-Styled text fields, dropdowns, radio buttons, and text areas.
-Added focus styling to show which form field the user is currently using.
-Styled the submit buttons and added hover and active effects.
-Adjusted the form layout for smaller screens to prevent content from overflowing.
+||Added spacing and borders around form sections.
+||Styled text fields, dropdowns, radio buttons, and text areas.
+||Added focus styling to show which form field the user is currently using.
+||Styled the submit buttons and added hover and active effects.
+||Adjusted the form layout for smaller screens to prevent content from overflowing.
+||
 |Responsive Design | Added media queries for tablet and mobile screen sizes.
-Reduced heading and paragraph sizes on smaller screens.
-Reduced page padding and spacing on smaller devices.
-Changed the Home page hero layout from two columns to one column on smaller screens.
-Changed product and other table-based layouts to a single-column layout on mobile devices.
-Adjusted product images for smaller screens.
-Made the navigation responsive for mobile devices.
-Adjusted the Google Map to fit smaller screens.
-Ensured form elements remain within the available screen width.
-Used relative sizing and responsive widths where appropriate to make the website adaptable to different screen sizes.
+||Reduced heading and paragraph sizes on smaller screens.
+||Reduced page padding and spacing on smaller devices.
+||Changed the Home page hero layout from two columns to one column on smaller screens.
+||Changed product and other table-based layouts to a single-column layout on mobile devices.
+||Adjusted product images for smaller screens.
+||Made the navigation responsive for mobile devices.
+||Adjusted the Google Map to fit smaller screens.
+||Ensured form elements remain within the available screen width.
+||Used relative sizing and responsive widths where appropriate to make the website adaptable to different screen sizes.
+||
 |User Interaction | Added hover effects to navigation links, buttons, product cards, and selected images.
-Added focus states for links and form controls.
-Added active states to buttons and interactive links.
-Made the Home page product/category cards visually indicate that they are clickable.
-Added visual feedback when users interact with important website elements. 
+||Added focus states for links and form controls.
+||Added active states to buttons and interactive links.
+||Made the Home page product/category cards visually indicate that they are clickable.
+||Added visual feedback when users interact with important website elements. 
 
 ## References
  - Bannarasee, R. 2024.  A Cafe and Bakery?. [online]  Available at: 
@@ -178,8 +184,6 @@ https://www.chefsresource.com/a-cafe-and-bakery/ [Accessed 01 August 2026].
  - Day, B., Holznienkemper, L. 2025. What Is A KPI? Definitions And Examples. [online] 
 Available at: https://www.forbes.com/advisor/business/what-is-a-kpi-definition
 examples/ [Accessed 01 August 2026]. 
- - Font Awesome 5. 2024. Font awesome 5. [online] Fontawesome.com. Available at: https://fontawesome.com/ [Accessed 08 September 2026].
- - Google. 2019. Google fonts. [online] Google Fonts. Available at: https://fonts.google.com/ [Accessed 08 September 2026].
  - Kimanthi, S. 2025. Low Fidelity Wireframes [What are they + Examples]. [online] 
 Available at: https://alvarotrigo.com/blog/low-fidelity-wireframes/ [Accessed 01 
 August 2026] 
@@ -187,3 +191,7 @@ August 2026]
 at: https://www.sayenkodesign.com/user-experience-design-principles-for
 websites/ [Accessed 01 August 2026]
 - Shutterstock. 2026. Pastries and Food royalty-free images, 13 May 2026. [Online]. Available at: https://www.shutterstock.com/search/pastries-and-food?msockid=05178e03603468a1398e990161d069bf&dd_referrer=https%3A%2F%2Fwww.bing.com%2F [Accessed 01 August 2026]
+
+## Part 2 - References
+ - Font Awesome 5. 2024. Font awesome 5. [online] Fontawesome.com. Available at: https://fontawesome.com/ [Accessed 08 September 2026].
+ - Google. 2019. Google fonts. [online] Google Fonts. Available at: https://fonts.google.com/ [Accessed 08 September 2026].
