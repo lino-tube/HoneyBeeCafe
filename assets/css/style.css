@@ -250,6 +250,11 @@ section {
     margin: 0 auto;
 }
 
+/* Centres the Explore Our Products & Services heading */
+main > section:nth-of-type(2) h3 {
+    text-align: center;
+}
+
 /* Cafe highlights */
 main > section:nth-of-type(3) {
     text-align: center;
