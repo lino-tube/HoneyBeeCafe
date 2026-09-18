@@ -180,13 +180,16 @@ The CSS was used to improve the website's:
 
 ## How the website looks on different devices
 ### Mobile S - 320px
-<img width="1344" height="643" alt="Screenshot 2026-09-16 161037" src="https://github.com/user-attachments/assets/2e60393d-b380-43a8-9f96-8c738041108a" />
+<img width="1362" height="643" alt="Screenshot 2026-09-18 080417" src="https://github.com/user-attachments/assets/4d05e39d-5183-49ed-9ff6-fcd2eb987a73" />
+
 
 ### Tablet - 768px
-<img width="1355" height="643" alt="Screenshot 2026-09-16 161117" src="https://github.com/user-attachments/assets/37d2f2ef-b12b-4616-99f3-61ecd38d8551" />
+<img width="1355" height="683" alt="Screenshot 2026-09-18 080439" src="https://github.com/user-attachments/assets/2bed7a75-5ff0-41f7-b5fc-342da5dbd593" />
+
 
 ### Laptop - 1024px
-<img width="1357" height="679" alt="Screenshot 2026-09-16 161156" src="https://github.com/user-attachments/assets/4d3cd9e0-2245-450d-9209-cf79c98aa291" />
+<img width="1357" height="676" alt="Screenshot 2026-09-18 080501" src="https://github.com/user-attachments/assets/c42fc636-e3b1-451c-9d8b-fa7c974a9e33" />
+
 
 ## References
  - Bannarasee, R. 2024.  A Cafe and Bakery?. [online]  Available at: 
