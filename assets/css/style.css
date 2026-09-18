@@ -318,6 +318,48 @@ footer p {
     margin: 0.5rem auto;
 }
 
+/* Footer three-column layout */
+footer {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: start;
+    gap: 2rem;
+    text-align: center;
+}
+
+/* Left side of the footer */
+.footer-social {
+    text-align: left;
+}
+
+/* Middle section of the footer */
+.footer-info {
+    text-align: center;
+}
+
+/* Right side of the footer */
+.quick-links {
+    text-align: left;
+}
+
+/* Quick Links heading */
+.quick-links h3 {
+    margin-bottom: 1rem;
+}
+
+/* Quick Links are displayed one underneath another */
+.quick-links a {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--dark-text);
+}
+
+/* Changes Quick Link colour when hovered */
+.quick-links a:hover {
+    color: #5B9BD5;
+    text-decoration: underline;
+}
+
 /* About page layout */
 /* Centres the main About page heading */
 main > h1 {
@@ -760,6 +802,24 @@ main section table td p {
         width: 100%;
         height: 350px;
         min-height: 300px;
+    }
+
+     /* Changes the footer to one column on small screens */
+    footer {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    /* Centres the footer sections on small screens */
+    .footer-social,
+    .footer-info,
+    .quick-links {
+        text-align: center;
+    }
+
+    /* Centres the social media icons */
+    .social-icons {
+        justify-content: center;
     }
 }
 
