@@ -1178,3 +1178,86 @@ body.lightbox-open {
         right: 12px;
     }
 }
+
+/* PART 3 - FAQ ACCORDION */
+
+/* Main FAQ section */
+.faq-section {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* FAQ heading and introductory text */
+.faq-section h2,
+.faq-section > p {
+    text-align: center;
+}
+
+/* Each question and answer container */
+.faq-item {
+    margin-bottom: 12px;
+    border: 2px solid #F7C8D0;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #FFF8E7;
+}
+
+/* Clickable question button */
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    padding: 16px 20px;
+    border: none;
+    background-color: #A9D6E5;
+    color: #333333;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+    cursor: pointer;
+}
+
+/* Changes the question colour on hover */
+.faq-question:hover {
+    background-color: #F7C8D0;
+}
+
+/* Shows which question is selected by keyboard */
+.faq-question:focus-visible {
+    outline: 3px solid #367C99;
+    outline-offset: -3px;
+}
+
+/* Styles the expanded answer */
+.faq-answer {
+    padding: 16px 20px;
+    line-height: 1.6;
+}
+
+/* Keeps collapsed answers hidden */
+.faq-answer[hidden] {
+    display: none;
+}
+
+/* Plus and minus symbol */
+.faq-icon {
+    font-size: 24px;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+/* Adjusts spacing on smaller screens */
+@media (max-width: 480px) {
+    .faq-section {
+        padding: 12px;
+    }
+
+    .faq-question {
+        padding: 14px;
+        font-size: 14px;
+    }
+}

@@ -1,5 +1,4 @@
 /* HONEYBEE CAFE - MENU IMAGE LIGHTBOX */
-
 // Selects the lightbox elements from the HTML.
 const lightbox = document.getElementById("menu-lightbox");
 const lightboxImage = document.getElementById("lightbox-image");
