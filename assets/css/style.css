@@ -1183,9 +1183,11 @@ body.lightbox-open {
 
 /* Main FAQ section */
 .faq-section {
-    max-width: 800px;
+    width: 95%;
+    max-width: none;
     margin: 40px auto;
-    padding: 20px;
+    padding: 20px 0;
+    box-sizing: border-box;
 }
 
 /* FAQ heading and introductory text */
@@ -1230,6 +1232,14 @@ body.lightbox-open {
 .faq-question:focus-visible {
     outline: 3px solid #367C99;
     outline-offset: -3px;
+}
+
+/* Keeps FAQ buttons aligned and overrides general button centuring*/
+.faq-section .faq-question {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 /* Styles the expanded answer */
