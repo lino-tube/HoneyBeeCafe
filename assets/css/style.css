@@ -1091,3 +1091,90 @@ main > section:nth-of-type(2) td img {
         transition: none;
     }
 }
+
+/* PART 3 - MENU IMAGE LIGHTBOX */
+/* Dark background displayed behind the enlarged image */
+.menu-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+/* Keeps the lightbox hidden until JavaScript opens it */
+.menu-lightbox[hidden] {
+    display: none;
+}
+
+/* Styles the enlarged menu photograph */
+#lightbox-image {
+    display: block;
+    max-width: 90%;
+    max-height: 85vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border: 4px solid var(--baby-pink);
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Close button in the top-right corner */
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    border: none;
+    background-color: var(--baby-blue);
+    color: #333333;
+    font-size: 30px;
+    font-weight: bold;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Changes the close button colour when hovered over */
+.lightbox-close:hover {
+    background-color: var(--baby-pink);
+}
+
+/* Shows a visible outline when using the keyboard */
+.lightbox-close:focus-visible {
+    outline: 3px solid white;
+    outline-offset: 4px;
+}
+
+/* Indicates that menu photographs can be clicked */
+.menu-photo-clickable {
+    cursor: zoom-in;
+}
+
+/* Slightly enlarges menu photographs when hovered over */
+.menu-photo-clickable:hover {
+    transform: scale(1.03);
+    transition: transform 0.2s ease;
+}
+
+/* Prevents the page from scrolling while the lightbox is open */
+body.lightbox-open {
+    overflow: hidden;
+}
+
+/* Adjusts the enlarged image and close button for mobile screens */
+@media (max-width: 480px) {
+    #lightbox-image {
+        max-width: 95%;
+        max-height: 75vh;
+    }
+
+    .lightbox-close {
+        top: 12px;
+        right: 12px;
+    }
+}
