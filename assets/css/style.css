@@ -1001,4 +1001,93 @@ main > section:nth-of-type(2) td img {
     transition: transform 0.3s ease;
 }
 
+/* HOME PAGE - CLICKABLE MENU CARDS */
+/* Styles only the three homepage menu cards */
+.home-menu-table td {
+    background-color: var(--cream-white);
+    border: 2px solid var(--baby-pink);
+    border-radius: 18px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
+/* Makes the entire card a clickable link */
+.home-menu-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    height: 100%;
+    color: var(--dark-text);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Keeps the existing photographs neat */
+.home-menu-card img {
+    border-radius: 12px;
+    max-width: 100%;
+}
+
+/* Styles the category headings */
+.home-menu-card h3 {
+    color: var(--dark-text);
+    text-align: center;
+}
+
+/* Makes the View Menu text look like a button */
+.home-menu-button {
+    display: inline-block;
+    background-color: var(--baby-blue);
+    color: var(--dark-text);
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-family: Arial, sans-serif;
+    font-size: 0.95rem;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.12);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Lifts the card when the mouse moves over it */
+.home-menu-table td:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.16);
+    border-color: var(--baby-blue);
+}
+
+/* Changes the button colour when hovering over the card */
+.home-menu-card:hover .home-menu-button {
+    background-color: var(--baby-pink);
+    transform: scale(1.05);
+}
+
+/* Shows keyboard users which card is selected */
+.home-menu-card:focus-visible {
+    outline: 3px solid #367C99;
+    outline-offset: 5px;
+    border-radius: 10px;
+}
+
+/* Gives feedback when a card is pressed */
+.home-menu-card:active .home-menu-button {
+    transform: scale(0.97);
+}
+
+/* Keeps the buttons comfortable to use on smaller screens */
+@media (max-width: 480px) {
+    .home-menu-button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Reduces movement for visitors who prefer fewer animations */
+@media (prefers-reduced-motion: reduce) {
+    .home-menu-table td,
+    .home-menu-button {
+        transition: none;
+    }
+}
