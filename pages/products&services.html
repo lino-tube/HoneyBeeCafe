@@ -34,6 +34,19 @@
     <!--Main Goes Here-->
     <main>
         <h1 align="center">MENU</h1>
+        <!-- PART 3 - MENU SEARCH AND FILTERING -->
+<div class="menu-search">
+    <label for="menu-search-input">Search Our Menu</label>
+
+    <input
+        type="search"
+        id="menu-search-input"
+        placeholder="Search for drinks, meals or pastries..."
+        autocomplete="off"
+    >
+
+    <p id="menu-search-status" role="status" aria-live="polite"></p>
+</div>
         <!--Beverage Section-->
         <section id="drinks">
             <h2 align="center">Drinks</h2>
@@ -422,6 +435,9 @@
 
 <!-- JavaScript for the menu photograph lightbox -->
 <script src="../assets/js/lightbox.js" defer></script>
+
+<!-- PART 3: JavaScript for menu search and filtering -->
+<script src="../assets/js/menu-search.js" defer></script>
 
 </body>
 </html>

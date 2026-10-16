@@ -1214,7 +1214,7 @@ body.lightbox-open {
     width: 100%;
     padding: 16px 20px;
     border: none;
-    background-color: #A9D6E5;
+    background-color:#F7C8D0;
     color: #333333;
     font-family: Arial, sans-serif;
     font-size: 16px;
@@ -1225,12 +1225,12 @@ body.lightbox-open {
 
 /* Changes the question colour on hover */
 .faq-question:hover {
-    background-color: #F7C8D0;
+    background-color: var(--baby-blue);
 }
 
 /* Shows which question is selected by keyboard */
 .faq-question:focus-visible {
-    outline: 3px solid #367C99;
+    outline: 3px solid #eff2f3;
     outline-offset: -3px;
 }
 
@@ -1270,4 +1270,56 @@ body.lightbox-open {
         padding: 14px;
         font-size: 14px;
     }
+}
+
+/* Part 3 - Menu Search and Filtering */
+/* Centres the search area above the menu */
+.menu-search {
+    width: 90%;
+    max-width: 550px;
+    margin: 30px auto 40px;
+    text-align: center;
+}
+
+/* Styles the search label */
+.menu-search label {
+    display: block;
+    margin-bottom: 12px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #333333;
+}
+
+/* Styles the menu search input */
+#menu-search-input {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #F7C8D0;
+    border-radius: 12px;
+    background-color: #FFF8E7;
+    color: #333333;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Highlights the search input when selected */
+#menu-search-input:focus {
+    outline: 2px solid #A9D6E5;
+    outline-offset: 2px;
+}
+
+/* Styles the search results message */
+#menu-search-status {
+    margin-top: 12px;
+    font-size: 14px;
+    color: #333333;
+}
+
+/* Ensures JavaScript can hide non-matching products */
+#drinks [hidden],
+#light-meals [hidden],
+#pastries [hidden] {
+    display: none !important;
 }
