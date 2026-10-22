@@ -7,6 +7,9 @@
     <link rel="icon" type="image/jpeg" href="../assets/images/favicon.logo.jpeg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <title>ENQUIRY | HoneyBee Cafe</title>
+    <!-- SEO: Description of the Enquiry page -->
+<meta name="description"
+      content="Make an enquiry at HoneyBee Cafe about our menu, orders, opening days, availability and other general cafe questions.">
 </head>
 <body>
     <!--Header Section-->
@@ -39,91 +42,155 @@
             Have a question about HoneyBee Cafe?<br/>
             Complete the form below and let us know how we can help.
         </p>
-        <!--Enquiry Form-->
-        <form>
-            <!--Customer's personal information-->
-            <fieldset>
-                <legend>Contact Information</legend>
-                <!--Full name field-->
-                <label for="full-name">Full Name:</label>
-                <input type="text" id="full-name" name="full-name" required>
-                <br/><br/>
-                <!--Email address field-->
-                <label for="email">Email Adress:</label>
-                <input type="email" id="email" name="email" required>
-                <br/><br/>
-                <!--Phone number field-->
-                <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone" required>
-            </fieldset>
-            <br/><br/>
-            <!--Type of Enquiry-->
-            <fieldset>
-                <legend>Enquiry Type</legend>
-                <!--Allows the customers to choose what their enquiry is about-->
-                <label for="enquiry-type">What is your enquiry about?</label>
-                <select id="enquiry-type" name="enquiry-type" required>
-                    <option value="">-- Please Select --</option>
-                    <!--Product and menu questions-->
-                    <option value="product-menu">Product & Menu Enquiry</option>
-                    <!--Placing an order option-->
-                    <option value="order">Order Enquiry</option>
-                    <!--Questions about visiting the cafe-->
-                    <option value="visit-availability">Visit & Availability</option>
-                    <!--General questions about the cafe-->
-                    <option value="general">General Cafe Enquiry</option>
-                </select>
-            </fieldset>
-            <br/><br/>
-            <!--Order Details-->
-            <fieldset>
-                <legend>Order Details</legend>
-                <!--Allows the customers to list the number of items they want-->
-                <label for="order-items">What would you like to order?</label>
-                <textarea id="order-items" name="order-items" rows="4" cols="40" placeholder="Please list the items you would like to order."></textarea>
-                <br/><br/>
-                <!--Allows the customers to choose delivery or collection-->
-                <fieldset>
-                    <legend>Delivery or Collection</legend>
-                    <!--Delivery option-->
-                    <input type="radio" id="delivery" name="order-method" value="delivery">
-                    <label for="delivery">Delivery</label>
-                    <!--Collection option-->
-                    <input type="radio" id="collection" name="order-method" value="collection">
-                    <label for="collection">Collection</label>
-                </fieldset>
-            </fieldset>
-            <br/><br/>
-            <!--Delivery and Collection Details-->
-            <fieldset>
-                <legend>Delivery and Collection Details</legend>
-                <!--Delivery address-->
-                <label for="delivery-address">Delivery Address:</label>
-                <br/>
-                <textarea id="delivery-address" name="delivery-address" rows="4" cols="40" placeholder="Enter your delivery address"></textarea>
-                <br/><br/>
-                <!--Preferred date for delivery or collect-->
-                <label for="preferred-date">Preferred Date:</label>
-                <input type="date" id="preferred-date" name="preferred-date">
-                <br/><br/>
-                <!--Preferred time for delivery or collection-->
-                <label for="preferred-time">Preferred Time:</label>
-                <input type="time" id="preferred-time" name="preferred-time">
-            </fieldset>
-            <br/><br/>
-            <!--Delivery instructions or Additional information-->
-            <fieldset>
-                <legend>Delivery Instructions or Additional Information</legend>
-                <!--Allows customer's to give out the instructions or explain their enquiry-->
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" cols="40" placeholder="Tell us anything else we should know"></textarea>
-            </fieldset>
-            <br/><br/>
-            <!--Form submission button-->
-            <div>
-                <button type="submit">Submit Enquiry</button>
-            </div>
-        </form>
+       <!-- PART 3 - ENQUIRY FORM WITH VALIDATION -->
+<form id="enquiry-form">
+
+    <!-- Customer contact information -->
+    <fieldset>
+        <legend>Contact Information</legend>
+
+        <!-- Full name: letters only, with spaces, hyphens and apostrophes -->
+        <label for="full-name">Full Name:</label>
+        <input
+            type="text"
+            id="full-name"
+            name="full-name"
+            placeholder="Enter your full name"
+            minlength="2"
+            maxlength="60"
+            pattern="[A-Za-zÀ-ÿ]+([ '-][A-Za-zÀ-ÿ]+)*"
+            title="Use letters only. Spaces, hyphens and apostrophes are allowed."
+            autocomplete="name"
+            required
+        >
+        <br><br>
+
+        <!-- Email address -->
+        <label for="email">Email Address:</label>
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="example@gmail.com"
+            autocomplete="email"
+            required
+        >
+        <br><br>
+
+        <!-- Phone number -->
+        <label for="phone">Phone Number:</label>
+        <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="e.g. 0712345678"
+            inputmode="tel"
+            pattern="\+?[0-9]{9,15}"
+            title="Enter 9 to 15 digits, with an optional + at the beginning. Do not use spaces."
+            autocomplete="tel"
+            required
+        >
+    </fieldset>
+
+    <br><br>
+
+    <!-- Type of enquiry -->
+    <fieldset>
+        <legend>Enquiry Type</legend>
+
+        <label for="enquiry-type">What is your enquiry about?</label>
+        <select id="enquiry-type" name="enquiry-type" required>
+            <option value="">-- Please Select --</option>
+            <option value="product-menu">Product &amp; Menu Enquiry</option>
+            <option value="order">Order Enquiry</option>
+            <option value="visit-availability">Visit &amp; Availability</option>
+            <option value="general">General Cafe Enquiry</option>
+        </select>
+    </fieldset>
+
+    <br><br>
+
+    <!-- Order details -->
+   <!-- PART 3 - Order fields: only shown for order enquiries -->
+<div id="order-section" class="conditional-section" hidden>
+    <fieldset>
+        <legend>Order Details</legend>
+
+        <label for="order-items">What would you like to order?</label>
+        <textarea id="order-items" name="order-items"
+                  rows="4" cols="40" minlength="5" maxlength="300"
+                  placeholder="Please list the items you would like to order."></textarea>
+        <small>Enter 5 to 300 characters.</small>
+
+        <br><br>
+
+        <fieldset>
+            <legend>Delivery or Collection</legend>
+
+            <input type="radio" id="delivery"
+                   name="order-method" value="delivery">
+            <label for="delivery">Delivery</label>
+
+            <input type="radio" id="collection"
+                   name="order-method" value="collection">
+            <label for="collection">Collection</label>
+        </fieldset>
+    </fieldset>
+</div>
+
+<!-- Address: only shown when delivery is selected -->
+<div id="delivery-section" class="conditional-section" hidden>
+    <fieldset>
+        <legend>Delivery Details</legend>
+
+        <label for="delivery-address">Delivery Address:</label>
+        <textarea id="delivery-address" name="delivery-address"
+                  rows="4" cols="40" minlength="10" maxlength="200"
+                  placeholder="Enter your delivery address"></textarea>
+        <small>Enter 10 to 200 characters.</small>
+    </fieldset>
+</div>
+
+<!-- Date and time: shown for orders and visit enquiries -->
+<div id="date-section" class="conditional-section" hidden>
+    <fieldset>
+        <legend>Preferred Date and Time</legend>
+
+        <label for="preferred-date">Preferred Date:</label>
+        <input type="date" id="preferred-date" name="preferred-date">
+
+        <br><br>
+
+        <label for="preferred-time">Preferred Time:</label>
+        <input type="time" id="preferred-time" name="preferred-time">
+    </fieldset>
+</div>
+
+<!-- Message: shown for every enquiry type -->
+<div id="message-section" class="conditional-section" hidden>
+    <fieldset>
+        <legend>Additional Information</legend>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message"
+                  rows="4" cols="40" minlength="10" maxlength="500"
+                  placeholder="Please explain your enquiry."></textarea>
+        <small>Enter 10 to 500 characters.</small>
+    </fieldset>
+</div>
+
+<br><br>
+
+    <!-- Form submission -->
+    <div>
+        <button type="submit">Submit Enquiry</button>
+    </div>
+
+    <!-- Displays validation or confirmation messages -->
+    <p id="enquiry-response" class="form-response"
+       role="status" aria-live="polite"></p>
+
+</form>
     </main>
 <!--Footer Section-->
 <footer>
@@ -169,5 +236,9 @@
         <a href="./contact.html">Contact</a>
     </div>
 </footer>
+
+<!-- PART 3 - Form validation JavaScript -->
+<script src="../assets/js/forms.js" defer></script>
+
 </body>
 </html>

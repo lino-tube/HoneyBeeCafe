@@ -7,6 +7,9 @@
     <link rel="icon" type="image/jpeg" href="../assets/images/favicon.logo.jpeg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <title>CONTACT | HoneyBee Cafe</title>
+    <!-- SEO: Description of the Contact page -->
+<meta name="description"
+      content="Contact HoneyBee Cafe for questions and information. Find our location, business hours, contact details and answers to frequently asked questions.">
 </head>
 <body>
 <!--Header Section-->
@@ -96,25 +99,80 @@
                 Have a question, suggestion or feedback?
                 Complete the form below and send us a message.
             </p>
-            <form>
-                <!--Full name-->
-                <label for="name">Full Name:</label>
-                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
-                <br/><br/>
-                <!--Email Address-->
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
-                <br/><br/>
-                <!--Phone Number-->
-                <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
-                <br/><br/>
-                <!--Message-->
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="6" cols="40" placeholder="Write your message or question here" required></textarea>
-                <br/><br/>
-                <button type="submit">Send Message</button>
-            </form> 
+<!-- PART 3 - CONTACT FORM WITH VALIDATION -->
+<form id="contact-form">
+
+    <!-- Customer's full name -->
+    <label for="name">Full Name:</label>
+    <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Enter your full name"
+        minlength="2"
+        maxlength="60"
+        pattern="[A-Za-zÀ-ÿ]+([ '-][A-Za-zÀ-ÿ]+)*"
+        title="Use letters only. Spaces, hyphens and apostrophes are allowed."
+        autocomplete="name"
+        required
+    >
+
+    <br><br>
+
+    <!-- Customer's email address -->
+    <label for="email">Email Address:</label>
+    <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Enter your email address"
+        autocomplete="email"
+        required
+    >
+
+    <br><br>
+
+    <!-- Customer's phone number -->
+    <label for="phone">Phone Number:</label>
+    <input
+        type="tel"
+        id="phone"
+        name="phone"
+        placeholder="e.g. 0712345678"
+        inputmode="tel"
+        pattern="\+?[0-9]{9,15}"
+        title="Enter 9 to 15 digits, with an optional + at the beginning. Do not use spaces."
+        autocomplete="tel"
+        required
+    >
+
+    <br><br>
+
+    <!-- Customer's message -->
+    <label for="message">Message:</label>
+    <textarea
+        id="message"
+        name="message"
+        rows="6"
+        cols="40"
+        placeholder="Write your message or question here"
+        minlength="10"
+        maxlength="500"
+        required
+    ></textarea>
+
+    <small>Enter between 10 and 500 characters.</small>
+
+    <br><br>
+
+    <!-- Submit button -->
+    <button type="submit">Send Message</button>
+
+    <!-- Displays validation or confirmation messages -->
+    <p id="contact-response" class="form-response"
+       role="status" aria-live="polite"></p>
+
+</form>
         </section>
         <!--Find Us-->
         <section>
@@ -228,6 +286,9 @@
 
 <!-- PART 3: JavaScript for the FAQ accordion -->
 <script src="../assets/js/faq.js" defer></script>
+
+<!-- PART 3 - Form validation -->
+<script src="../assets/js/forms.js" defer></script>
 
 </body>
 </html>
