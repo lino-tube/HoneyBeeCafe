@@ -190,6 +190,71 @@ The CSS was used to improve the website's:
 ### Laptop - 1024px
 <img width="1357" height="676" alt="Screenshot 2026-09-18 080501" src="https://github.com/user-attachments/assets/c42fc636-e3b1-451c-9d8b-fa7c974a9e33" />
 
+## Improvements Following Part 2
+
+The improvement identified after Part 2 was to make the menu-category images, cards and buttons on the Home page more clearly clickable. The **Drinks**, **Light Meals** and **Pastries** cards provide a **View Menu** prompt and link customers to the relevant category on the Products & Services page. Their hover and focus styling provides a clearer indication that customers can select them.
+
+## Part 3 - JavaScript Functionality and Search Engine Optimisation
+
+Part 3 focuses on adding interactive functionality to the HoneyBee Cafe website using JavaScript, while maintaining the existing page structure, colour scheme and responsive design. JavaScript is used for menu searching and sorting, the image lightbox, the frequently asked questions (FAQ) accordion, and customer form validation and submission.
+
+### Part 3 - Changelog
+
+| Point of Focus | Actions Taken |
+|---------------|---------------|
+| Home Page Menu Navigation | Made the Drinks, Light Meals and Pastries category cards, images and **View Menu** links more clearly clickable. |
+| | Linked each category to the corresponding section on the Products & Services page. |
+| Menu Search and Filtering | Added a search field that filters menu products as customers type. |
+| | Displayed matching products and a message when there are no matching items. |
+| Menu Sorting | Added a **Sort Menu** dropdown with **Default Menu Order**, **Name: A to Z** and **Name: Z to A** options. |
+| | Used JavaScript to sort product elements within their existing menu categories without changing their images or prices (Mozilla, n.d.-a). |
+| Menu Image Lightbox | Enabled customers to select menu photographs to view enlarged images. |
+| | Added controls to close the lightbox, including the close button and Escape key. |
+| FAQ Accordion | Added an interactive Frequently Asked Questions section on the Contact page. |
+| | Allowed customers to expand or collapse answers by selecting the relevant question. |
+| Enquiry Form | Added JavaScript validation for required information, full names, email addresses, phone numbers, character limits and applicable dates (Mozilla, n.d.-b). |
+| | Displayed enquiry fields according to the customer's selection: Product & Menu Enquiry, Order Enquiry, Visit & Availability or General Cafe Enquiry. |
+| | Displayed delivery details only when **Delivery** is selected, and provided order-related date and time fields for order enquiries. |
+| | Added responses relevant to the selected enquiry type and reset the form after a successful submission. |
+| Contact Form | Added a **Message Type** dropdown for General Question, Feedback, Complaint and Other. |
+| | Added JavaScript validation, submission feedback and form resetting after a successful submission (Mozilla, n.d.-b). |
+| Formspree Integration | Connected the Enquiry and Contact forms to separate Formspree endpoints. |
+| | Used `FormData` and JavaScript's Fetch API to submit the forms asynchronously, with success or error messages depending on the response (Mozilla, n.d.-c; Formspree, 2026). |
+| | Configured Formspree to send submission notifications to the designated email inbox. |
+| Search Engine Optimisation | Added unique meta descriptions to the five website pages to describe their content (Google, n.d.-b). |
+| | Included meaningful image alternative text and internal links between the pages (World Wide Web Consortium, n.d.). |
+| | Created `sitemap.xml` containing the website's page URLs and `robots.txt` containing the sitemap location and crawler instructions (Google, n.d.-a; Google, n.d.-c). |
+| Website Hosting | Published the website using GitHub Pages and maintained the HTML, CSS, JavaScript and images in the GitHub repository (GitHub, n.d.). |
+
+### Enquiry Form Functionality
+
+The Enquiry form provides different fields according to the enquiry type selected by the customer:
+
+| Enquiry Type | Information Displayed |
+|--------------|-----------------------|
+| Product & Menu Enquiry | A message field for questions about menu products. |
+| Order Enquiry | Order items, delivery or collection, preferred date and time, and optional additional information. |
+| Visit & Availability | A message field for questions about opening days, operating hours and suitable visiting times. |
+| General Cafe Enquiry | A message field for general enquiries. |
+
+For order enquiries, the delivery address becomes visible and required only if the customer selects **Delivery**. The form checks the relevant information before sending it to Formspree. Following an accepted submission, it displays a personalised message, clears the fields and returns to the initial enquiry selection.
+
+### Contact Form Functionality
+
+The Contact form collects the customer's full name, email address, phone number, message type and message. JavaScript checks the entered information and displays helpful errors when necessary. After Formspree accepts a valid submission, the page displays a personalised confirmation and clears the form (Mozilla, n.d.-b; Formspree, 2026).
+
+### Search Engine Optimisation
+
+The website includes page-specific titles and meta descriptions, descriptive image alternative text, internal navigation links, responsive styling, an XML sitemap and a robots file. The `sitemap.xml` file identifies the five published website pages, and `robots.txt` tells crawlers where to find the sitemap (Google, n.d.-a; Google, n.d.-c). Alternative text provides text descriptions of meaningful images (World Wide Web Consortium, n.d.).
+
+- **Live Website:** https://lino-tube.github.io/HoneyBeeCafe/
+- **GitHub Repository:** https://github.com/lino-tube/HoneyBeeCafe
+- **XML Sitemap:** https://lino-tube.github.io/HoneyBeeCafe/sitemap.xml
+- **Robots File:** https://lino-tube.github.io/HoneyBeeCafe/robots.txt
+
+### Website Functionality and Services
+
+The website is hosted on GitHub Pages. Formspree processes enquiries and contact messages and sends email notifications without requiring a separate application server in the website repository (GitHub, n.d.; Formspree, 2026). The order enquiry feature allows customers to request information about orders; it does not process online payments or automatically confirm purchases.
 
 ## References
  - Bannarasee, R. 2024.  A Cafe and Bakery?. [online]  Available at: 
@@ -208,3 +273,23 @@ websites/ [Accessed 01 August 2026]
 ## Part 2 - References
  - Font Awesome 5. 2024. Font awesome 5. [online] Fontawesome.com. Available at: https://fontawesome.com/ [Accessed 08 September 2026].
  - Google. 2019. Google fonts. [online] Google Fonts. Available at: https://fonts.google.com/ [Accessed 08 September 2026].
+
+### Part 3 - References
+
+Formspree, 2026. *Submit forms with JavaScript (AJAX)*. [Online]. Available at: https://help.formspree.io/articles/building-your-form/submit-forms-with-javascript-ajax [Accessed 16 October 2026].
+
+GitHub, n.d. *What is GitHub Pages?* [Online]. Available at: https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages [Accessed 20 October 2026].
+
+Google, n.d.-a. *Build and submit a sitemap*. Google Search Central. [Online]. Available at: https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap [Accessed 17 October 2026].
+
+Google, n.d.-b. *Control your snippets in search results*. Google Search Central. [Online]. Available at: https://developers.google.com/search/docs/appearance/snippet [Accessed 19 October 2026].
+
+Google, n.d.-c. *Introduction to robots.txt*. Google Search Central. [Online]. Available at: https://developers.google.com/search/docs/crawling-indexing/robots/intro [Accessed 20 October 2026].
+
+Mozilla, n.d.-a. *Array.prototype.sort()*. MDN Web Docs. [Online]. Available at: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort [Accessed 18 October 2026].
+
+Mozilla, n.d.-b. *Client-side form validation*. MDN Web Docs. [Online]. Available at: https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation [Accessed 18 October 2026].
+
+Mozilla, n.d.-c. *Using the Fetch API*. MDN Web Docs. [Online]. Available at: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch [Accessed 19 October 2026].
+
+World Wide Web Consortium, n.d. *Images tutorial*. Web Accessibility Initiative. [Online]. Available at: https://www.w3.org/WAI/tutorials/images/ [Accessed 16 October 2026].
