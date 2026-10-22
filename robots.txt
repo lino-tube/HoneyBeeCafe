@@ -1,0 +1,6 @@
+# Allow search engines to crawl the website
+User-agent: *
+Allow: /
+
+# Location of the website sitemap
+Sitemap: https://lino-tube.github.io/HoneyBeeCafe/sitemap.xml
