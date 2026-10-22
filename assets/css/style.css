@@ -1375,3 +1375,31 @@ form small {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
+
+/* PART 3 - MENU SORTING DROPDOWN */
+/* Adds spacing between search and sorting */
+.menu-search label[for="menu-sort"] {
+    margin-top: 18px;
+}
+
+/* Matches the sorting dropdown to the existing search input */
+#menu-sort {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #F7C8D0;
+    border-radius: 12px;
+    background-color: #FFF8E7;
+    color: #333333;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+/* Highlights the dropdown when selected */
+#menu-sort:focus {
+    outline: 2px solid #A9D6E5;
+    outline-offset: 2px;
+}

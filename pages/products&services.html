@@ -37,8 +37,10 @@
     <!--Main Goes Here-->
     <main>
         <h1 align="center">MENU</h1>
-        <!-- PART 3 - MENU SEARCH AND FILTERING -->
+  <!-- PART 3 - MENU SEARCH, FILTERING AND SORTING -->
 <div class="menu-search">
+
+    <!-- Existing menu search -->
     <label for="menu-search-input">Search Our Menu</label>
 
     <input
@@ -48,7 +50,18 @@
         autocomplete="off"
     >
 
+    <!-- New menu sorting dropdown -->
+    <label for="menu-sort">Sort Menu</label>
+
+    <select id="menu-sort" name="menu-sort">
+        <option value="default">Default Menu Order</option>
+        <option value="az">Name: A to Z</option>
+        <option value="za">Name: Z to A</option>
+    </select>
+
+    <!-- Existing search results message -->
     <p id="menu-search-status" role="status" aria-live="polite"></p>
+
 </div>
         <!--Beverage Section-->
         <section id="drinks">
