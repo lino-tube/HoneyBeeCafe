@@ -1323,3 +1323,55 @@ body.lightbox-open {
 #pastries [hidden] {
     display: none !important;
 }
+
+/* PART 3 - FORM VALIDATION MESSAGES */
+/* General form response styling */
+.form-response {
+    margin-top: 20px;
+    line-height: 1.6;
+    font-family: Arial, sans-serif;
+}
+
+/* Successful validation message */
+.form-success {
+    padding: 15px;
+    background-color: #FFF8E7;
+    border: 2px solid #A9D6E5;
+    border-radius: 10px;
+    color: #333333;
+}
+
+/* Error message */
+.form-error {
+    padding: 15px;
+    background-color: #FFF8E7;
+    border: 2px solid #C0392B;
+    border-radius: 10px;
+    color: #8B1E16;
+}
+
+/* Highlights invalid fields after the user has entered invalid data */
+input:not(:placeholder-shown):not(:focus):invalid,
+textarea:not(:placeholder-shown):not(:focus):invalid {
+    border-color: #C0392B;
+}
+
+/* Helpful instructions underneath textareas */
+form small {
+    display: block;
+    margin-top: 5px;
+    font-size: 13px;
+    color: #555555;
+}
+
+/* PART 3 - CONDITIONAL ENQUIRY FIELDS */
+/* Hides sections that are not relevant to the enquiry */
+.conditional-section[hidden] {
+    display: none !important;
+}
+
+/* Adds spacing between visible enquiry sections */
+.conditional-section:not([hidden]) {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
