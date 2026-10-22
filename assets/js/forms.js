@@ -32,6 +32,39 @@ function rejectField(field, message) {
     field.focus();
 }
 
+/* SEND FORM DATA TO FORMSPREE */
+
+// This function can send either the Contact or Enquiry form.
+async function sendToFormspree(form) {
+
+    // Collect the values of all enabled form fields.
+    const formData = new FormData(form);
+
+    // Send the information to the URL in the form's action.
+    const response = await fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: {
+            "Accept": "application/json"
+        }
+    });
+
+    // Check whether Formspree accepted the submission.
+    if (!response.ok) {
+
+        // Show a specific message if submissions are rate-limited.
+        if (response.status === 429) {
+            throw new Error(
+                "Too many submissions. Please wait and try again."
+            );
+        }
+
+        throw new Error(
+            "Your information could not be sent. Please try again."
+        );
+    }
+}
+
 // Removes custom errors when the customer edits a field.
 document.querySelectorAll(
     "#enquiry-form input, #enquiry-form textarea, " +
@@ -54,7 +87,7 @@ if (contactForm) {
     const contactResponse =
         document.getElementById("contact-response");
 
-    contactForm.addEventListener("submit", function(event) {
+    contactForm.addEventListener("submit", async function(event) {
 
         // Stop the browser from submitting or refreshing.
         event.preventDefault();
@@ -104,16 +137,50 @@ if (contactForm) {
             return;
         }
 
-        /* Display a successful contact form submission message */
-showFormMessage(
-    contactResponse,
-    "Thank you, " + name +
-    "! Your message has been submitted successfully.",
-    "form-success"
+        /* SEND CONTACT MESSAGE TO FORMSPREE */
+// Find the existing Send Message button.
+const submitButton = contactForm.querySelector(
+    'button[type="submit"]'
 );
 
-/* Clear all fields after submission */
-contactForm.reset();
+// Remember the button's original wording.
+const originalButtonText = submitButton.textContent;
+
+// Prevent duplicate submissions while sending.
+submitButton.disabled = true;
+submitButton.textContent = "Sending...";
+
+try {
+
+    // Wait for Formspree to accept the message.
+    await sendToFormspree(contactForm);
+
+    // Show a successful submission message.
+    showFormMessage(
+        contactResponse,
+        "Thank you, " + name +
+        "! Your message has been submitted successfully.",
+        "form-success"
+    );
+
+    // Clear the fields only after a successful submission.
+    contactForm.reset();
+
+} catch (error) {
+
+    // Keep the entered information if sending fails.
+    showFormMessage(
+        contactResponse,
+        error.message,
+        "form-error"
+    );
+
+} finally {
+
+    // Restore the Send Message button.
+    submitButton.disabled = false;
+    submitButton.textContent = originalButtonText;
+}
     });
 }
 
@@ -215,7 +282,7 @@ if (enquiryForm) {
     updateEnquiryFields();
 
     // Validate the form when submitted.
-    enquiryForm.addEventListener("submit", function(event) {
+    enquiryForm.addEventListener("submit", async function(event) {
 
         event.preventDefault();
 
@@ -335,22 +402,53 @@ if (enquiryForm) {
                 break;
         }
 
-        showFormMessage(
-
-    enquiryResponse,
-
-    "Thank you, " + name +
-
-    "! Your enquiry has been submitted successfully.",
-
-    "form-success"
-
+       /* SEND ENQUIRY TO FORMSPREE */
+// Find the existing Submit Enquiry button.
+const submitButton = enquiryForm.querySelector(
+    'button[type="submit"]'
 );
 
-/* Clear all fields after successful validation */
-enquiryForm.reset();
+// Save the button's original text.
+const originalButtonText = submitButton.textContent;
 
-/* Reset the enquiry type and hide unnecessary sections */
-updateEnquiryFields();
+// Prevent duplicate submissions.
+submitButton.disabled = true;
+submitButton.textContent = "Sending...";
+
+try {
+
+    // Wait for Formspree to accept the enquiry.
+    await sendToFormspree(enquiryForm);
+
+    // Display the customer's name and a relevant response.
+    showFormMessage(
+        enquiryResponse,
+        "Thank you, " + name +
+        "! Your enquiry has been submitted successfully. " +
+        response,
+        "form-success"
+    );
+
+    // Clear all the Enquiry form fields.
+    enquiryForm.reset();
+
+    // Hide the conditional sections again.
+    updateEnquiryFields();
+
+} catch (error) {
+
+    // Display an error without clearing the customer's answers.
+    showFormMessage(
+        enquiryResponse,
+        error.message,
+        "form-error"
+    );
+
+} finally {
+
+    // Restore the original Submit Enquiry button.
+    submitButton.disabled = false;
+    submitButton.textContent = originalButtonText;
+}
     });
 }
