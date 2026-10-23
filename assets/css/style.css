@@ -1403,3 +1403,31 @@ form small {
     outline: 2px solid #A9D6E5;
     outline-offset: 2px;
 }
+
+/* PART 3 - INLINE JAVASCRIPT VALIDATION */
+
+/* Red text displayed below invalid fields */
+.field-error {
+    display: block;
+    color: #C0392B;
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+/* Red border around invalid fields */
+input.input-error,
+select.input-error,
+textarea.input-error {
+    border: 2px solid #C0392B;
+}
+
+/* Keep the red border visible when selecting the field */
+input.input-error:focus,
+select.input-error:focus,
+textarea.input-error:focus {
+    outline: 2px solid #C0392B;
+    outline-offset: 2px;
+}
